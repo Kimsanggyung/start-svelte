@@ -9,10 +9,10 @@
 	});
 
 	const userId = 'acbcdc';
-	let inputId = '아이디'
+	let inputId = ''
 
 	const passWord = 135792468;
-	let inputPass = '비밀번호'
+	let inputPass = ''
 
 	function login() {
 		if(
@@ -33,7 +33,7 @@
 
 <h1>현재시간: {formatter.format($time)}</h1>
 
-<input bind:value={inputId}>
-<input bind:value={inputPass}> 
+<input bind:value={inputId} placeholder='아이디'>
+<input bind:value={inputPass} placeholder='비밀번호'> 
 
 <button on:click={login}>로그인</button>
