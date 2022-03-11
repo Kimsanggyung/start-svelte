@@ -1,8 +1,6 @@
 <script>
-	let name= 'king'
-	let src = '/tutorial/image.gif';
+	let string = '관상가 양반 <strong>내가 왕이 될 상인가!!!</strong>'
 </script>
 
-<img {src} alt="{name} dances.">
 
-<h1>Hello Svelte {name} </h1>
+<p>{@html string} </p>
