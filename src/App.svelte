@@ -18,4 +18,7 @@
 
 
 <h1>현재시간: {formatter.format($time)}</h1>
+
+<input> 
+
 <button on:click={login}></button>
