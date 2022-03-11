@@ -8,8 +8,14 @@
 		second: '2-digit'
 	});
 
+	const userId = acbcdc;
+
+	const passWord = 135792468;
+
+
+
 	function login() {
-		 alert('로그인 성공') 
+		 alert('로그인 성공')
 	};
 
 
