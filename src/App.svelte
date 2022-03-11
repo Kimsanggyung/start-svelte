@@ -1,6 +1,12 @@
 <script>
-	let string = '관상가 양반 <strong>내가 왕이 될 상인가!!!</strong>'
+	import { time } from './main.js';
+
+	const formatter = new Intl.DateTimeFormat('ko', {
+		hour24: true,
+		hour: 'numeric',
+		minute: '2-digit',
+		second: '2-digit'
+	});
 </script>
 
-
-<p>{@html string} </p>
+<h1>현제시각 {formatter.format($time)}</h1>
