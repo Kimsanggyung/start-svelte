@@ -20,6 +20,10 @@
 			passWord == inputPass
 		)
 		 alert('로그인 성공')
+		 else{
+			 alert('아이디나 비번이 틀렸습니다.')
+		 }
+
 	};
 
 
