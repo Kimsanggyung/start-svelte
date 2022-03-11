@@ -18,8 +18,10 @@
 		if(
 			userId == inputId,
 			passWord == inputPass
-		)
+		){
 		 alert('로그인 성공')
+		}
+		
 		 else{
 			 alert('아이디나 비번이 틀렸습니다.')
 		 }
@@ -30,10 +32,14 @@
 </script>
 
 
+<body>
 
-<h1>현재시간: {formatter.format($time)}</h1>
+	<h1>현재시간: {formatter.format($time)}</h1>
 
-<input bind:value={inputId} placeholder='아이디'>
-<input bind:value={inputPass} placeholder='비밀번호'> 
+	<main>
+		<input bind:value={inputId} placeholder='아이디'>
+		<input bind:value={inputPass} placeholder='비밀번호'> 
+		<button on:click={login}>로그인</button>
+	</main>
 
-<button on:click={login}>로그인</button>
+</body>
