@@ -23,6 +23,7 @@
 		}
 		
 		 else{
+			 inputPass = ''
 			 alert('아이디나 비번이 틀렸습니다.')
 		 }
 
@@ -37,8 +38,8 @@
 	<h1>현재시간: {formatter.format($time)}</h1>
 
 	<main>
-		<input bind:value={inputId} placeholder='아이디'>
-		<input bind:value={inputPass} placeholder='비밀번호'> 
+		<input bind:value={inputId} type="text" placeholder='아이디'>
+		<input bind:value={inputPass} type="password" placeholder='비밀번호'> 
 		<button on:click={login}>로그인</button>
 	</main>
 
