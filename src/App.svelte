@@ -9,4 +9,6 @@
 	});
 </script>
 
-<h1>현제시각 {formatter.format($time)}</h1>
+
+
+<h1>현재시간: {formatter.format($time)}</h1>
