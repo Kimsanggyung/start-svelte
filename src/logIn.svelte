@@ -1,11 +1,11 @@
 <script>
 
- 	const userId = 'acbcdc';
-    export let inputId = '';  
-	const passWord = 135792468;
-    export let inputPass = ''; 
+ 	export const userId = 'acbcdc';
+ 
+	export const passWord = 135792468;
+    
 
-	export function login() {
+	function login() {
 		if(
 			userId == inputId,
 			passWord == inputPass
