@@ -1,6 +1,8 @@
 <script>
 	import { time } from './main.js';
 
+    import { login } from "./logIn.svelte";
+
 	const formatter = new Intl.DateTimeFormat('ko', {
 		hour24: true,
 		hour: 'numeric',
@@ -8,27 +10,10 @@
 		second: '2-digit'
 	});
 
-	const userId = 'acbcdc';
-	let inputId = ''
+	
+	export let inputId = ''
 
-	const passWord = 135792468;
-	let inputPass = ''
-
-	function login() {
-		if(
-			userId == inputId,
-			passWord == inputPass
-		){
-		 alert('로그인 성공')
-		}
-		
-		 else{
-			 inputPass = ''
-			 alert('아이디나 비번이 틀렸습니다.')
-		 }
-
-	};
-
+	export let inputPass = ''
 
 </script>
 
