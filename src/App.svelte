@@ -43,3 +43,9 @@
 	</main>
 
 </body>
+
+<style>
+	#error{
+		color: red;
+	}
+</style>
