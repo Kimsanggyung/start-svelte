@@ -14,6 +14,8 @@
 	let inputId = ''
 	let inputPass = ''
 
+	
+
  	function logIn(){
 		 if(
 			 userId == inputId,
@@ -35,11 +37,17 @@
 	<h1>현재시간: {formatter.format($time)}</h1>
 
 	<main>
-		<input bind:value={inputId} type="text" placeholder='아이디'>
-		<input bind:value={inputPass} type="password" placeholder='비밀번호'> 
-		<button on:click={logIn}>로그인</button>
-		<br>
-		<span id=error></span>
+		<div>
+			<input bind:value={inputId} type="text" placeholder='아이디'>
+			<input bind:value={inputPass} type="password" placeholder='비밀번호'> 
+			<button on:click={logIn}>로그인</button>
+			<br>
+			<span id=error></span>
+		</div>
+
+		<div>
+			<button>LogOut</button>
+		</div>
 	</main>
 
 </body>
