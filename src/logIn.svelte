@@ -1,8 +1,8 @@
 <script>
 
- 	export const userId = 'acbcdc';
+	const userId = 'acbcdc';
  
-	export const passWord = 135792468;
+	const passWord = 135792468;
     
 
 	export function logIn() {
