@@ -14,7 +14,6 @@
 		}
 		
 		 else{
-			 inputPass = ''
 			 alert('아이디나 비번이 틀렸습니다.')
 		 }
 
