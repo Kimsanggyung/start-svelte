@@ -8,8 +8,8 @@
 		second: '2-digit'
 	});
 
-	const userId = 'acbcdc';
- 	const passWord = 135792468;
+	const userId = 'a';
+ 	const passWord = 135;
  
 	let inputId = ''
 	let inputPass = ''
@@ -19,7 +19,7 @@
 			 userId == inputId,
 			 passWord == inputPass
 		 ){
-			 alert("로그인 성공")
+			location.href='loged.svelte'
 		 }
 		 else{
 			 document.getElementById('error').innerHTML = "아이디 또는 비밀번호가 옳지않습니다."
