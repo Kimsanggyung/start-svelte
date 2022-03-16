@@ -1,7 +1,7 @@
 <script>
 	import { time } from './main.js';
 
-    import { userId,passWord } from "./logIn.svelte";
+	import { logIn } from "./logIn.svelte";
 
 	const formatter = new Intl.DateTimeFormat('ko', {
 		hour24: true,
