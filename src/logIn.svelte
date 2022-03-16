@@ -5,7 +5,7 @@
 	export const passWord = 135792468;
     
 
-	function login() {
+	export function logIn() {
 		if(
 			userId == inputId,
 			passWord == inputPass
