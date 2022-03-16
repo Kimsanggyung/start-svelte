@@ -1,8 +1,11 @@
 <script>
 	import { time } from './main.js';
 
-    import { login } from "./logIn.svelte";
+    import { logIn } from "./logIn.svelte";
 
+	import { inputId } from './logIn.svlte';
+
+	import { inputPass } from "./logIn.svelte";
 	const formatter = new Intl.DateTimeFormat('ko', {
 		hour24: true,
 		hour: 'numeric',
@@ -10,10 +13,7 @@
 		second: '2-digit'
 	});
 
-	
-	export let inputId = ''
 
-	export let inputPass = ''
 
 </script>
 
@@ -25,7 +25,7 @@
 	<main>
 		<input bind:value={inputId} type="text" placeholder='아이디'>
 		<input bind:value={inputPass} type="password" placeholder='비밀번호'> 
-		<button on:click={login}>로그인</button>
+		<button on:click={logIn}>로그인</button>
 	</main>
 
 </body>
