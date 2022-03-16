@@ -22,7 +22,7 @@
 			 alert("로그인 성공")
 		 }
 		 else{
-			 alert("아이디 또는 비밀번호가 옳지않습니다.")
+			 document.getElementById('error').innerHTML = "아이디 또는 비밀번호가 옳지않습니다."
 		 }
 	 }
 
