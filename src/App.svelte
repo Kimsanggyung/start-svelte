@@ -38,7 +38,7 @@
 		<input bind:value={inputId} type="text" placeholder='아이디'>
 		<input bind:value={inputPass} type="password" placeholder='비밀번호'> 
 		<button on:click={logIn}>로그인</button>
-		<span></span>
+		<span id=error></span>
 	</main>
 
 </body>
