@@ -1,9 +1,9 @@
 <script>
 
  	const userId = 'acbcdc';
-    import { inputId } from "./App.svelte";
+    export let inputId = '';  
 	const passWord = 135792468;
-    import { inputPass } from "./App.svelte";
+    export let inputPass = ''; 
 
 	export function login() {
 		if(
