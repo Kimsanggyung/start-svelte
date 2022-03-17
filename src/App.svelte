@@ -22,6 +22,10 @@
 
 	let userName;
 
+	name.subscribe(value => {
+		userName = value
+	})
+
  	function logIn(){
 		 if(
 			 userId == inputId,
