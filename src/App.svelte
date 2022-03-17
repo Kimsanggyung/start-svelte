@@ -1,6 +1,8 @@
 <script>
 	import { time } from './main.js';
 
+	import { name  } from "./store.js";
+
 	const formatter = new Intl.DateTimeFormat('ko', {
 		hour24: true,
 		hour: 'numeric',
@@ -17,6 +19,8 @@
 	let logged = {loggedIn: false}
 
 	let toggle = () => logged.loggedIn = !logged.loggedIn;
+
+	let userName;
 
  	function logIn(){
 		 if(
