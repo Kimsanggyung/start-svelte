@@ -23,12 +23,19 @@
 
 	let toggle = () => logged.loggedIn = !logged.loggedIn;
 
-	let loggedInB = {loggedInB: false}
+	let loggedB = {loggedInB: false}
+
+	let toggleB = () => loggedB.loggedInB = !loggedB.loggedInB;
+
+
 
  	function logIn(){
 		 if(
 			 userId == inputId,
-			 passWord == inputPass
+			 passWord == inputPass,
+			 userB == inputId,
+			 userPass ==inputPass
+
 		 ){
 			logged.loggedIn = !logged.loggedIn,
 			console.log('로그인 성공')
@@ -64,6 +71,11 @@
 				<img id="Lee" src = {$idPicture} alt=" Lee Jae-yong">
 				<button on:click={toggle}>LogOut</button>
 			</div>
+		{/if}
+
+		{#if loggedB.loggedInB}
+			<h1>환영합니다</h1>
+			<button on:click={toggleB}>LogOut</button>
 		{/if}
 	</main>
 
