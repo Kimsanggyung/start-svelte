@@ -9,7 +9,7 @@
 	});
 
 	const userId = 'a';
- 	const passWord = 135;
+ 	const passWord = 123;
  
 	let inputId = ''
 	let inputPass = ''
