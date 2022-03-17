@@ -48,7 +48,7 @@
 		</div>
 		{#if logged.loggedIn}
 		<div>
-			<button>LogOut</button>
+			<button on:click={logged}>LogOut</button>
 		</div>
 		{/if}
 	</main>
