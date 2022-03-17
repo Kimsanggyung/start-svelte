@@ -1,9 +1,7 @@
 <script>
 	import { time } from './main.js';
 
-	import { name } from "./store.js";
-	
-	import { idPicture } from "./store";
+	import { name, idPicture, birth } from "./store.js";
 
 	const formatter = new Intl.DateTimeFormat('ko', {
 		hour24: true,
@@ -56,6 +54,7 @@
 		{#if logged.loggedIn}
 			<div class="loggedIn">
 				<h1>환영합니다 {$name} 회원님</h1>
+				<h2>생년월일 {$birth} </h2>
 				<img src = {$idPicture} alt=" Lee Jae-yong">
 				<button on:click={toggle}>LogOut</button>
 			</div>
