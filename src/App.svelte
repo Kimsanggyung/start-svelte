@@ -67,4 +67,9 @@
 	#error{
 		color: red;
 	}
+
+	#Lee{
+		width: 175px;
+		height: 269px;
+	}
 </style>
