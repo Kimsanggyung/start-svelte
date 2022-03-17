@@ -23,7 +23,7 @@
 			 userId == inputId,
 			 passWord == inputPass
 		 ){
-			location.href='loged.svelte'
+			console.log('로그인 성공')
 		 }
 		 else{
 			 document.getElementById('error').innerHTML = "아이디 또는 비밀번호가 옳지않습니다."
