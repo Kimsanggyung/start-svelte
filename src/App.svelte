@@ -16,6 +16,8 @@
 
 	let logged = {loggedIn: false}
 
+	let toggle = () => logged.loggedIn = !logged.loggedIn;
+
  	function logIn(){
 		 if(
 			 userId == inputId,
