@@ -43,7 +43,6 @@
 		){
 			logged.loggedIn = !logged.loggedIn,
 			console.log('로그인 성공')
-			name.set('정씨')
 		}
 		else{
 			document.getElementById('error').innerHTML = "아이디 또는 비밀번호가 옳지않습니다."
@@ -62,7 +61,7 @@
 			<div class="loggedIn">
 				<input bind:value={inputId} type="text" placeholder='아이디'> 
 				<input bind:value={inputPass} type="password" placeholder='비밀번호'> 
-				<button on:click={logIn} on:ckick={logInJ}>로그인</button>
+				<button on:ckick={logInJ}>로그인</button>
 				<br/>
 				<span id=error></span>
 			</div>
