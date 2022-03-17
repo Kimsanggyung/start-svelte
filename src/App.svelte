@@ -55,7 +55,7 @@
 			<div class="loggedIn">
 				<h1>환영합니다 {$name} 회원님</h1>
 				<h2>생년월일 {$birth} </h2>
-				<img src = {$idPicture} alt=" Lee Jae-yong">
+				<img id="Lee" src = {$idPicture} alt=" Lee Jae-yong">
 				<button on:click={toggle}>LogOut</button>
 			</div>
 		{/if}
