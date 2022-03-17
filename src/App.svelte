@@ -46,10 +46,11 @@
 			<br>
 			<span id=error></span>
 		</div>
-
+		{#if logged.loggedIn}
 		<div>
 			<button>LogOut</button>
 		</div>
+		{/if}
 	</main>
 
 </body>
