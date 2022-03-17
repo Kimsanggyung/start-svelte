@@ -59,7 +59,7 @@
 
 		{#if logged.loggedIn}
 			<div class="loggedIn">
-				<h1>환영합니다 회원님</h1>
+				<h1>환영합니다 {userName} 회원님</h1>
 				<button on:click={toggle}>LogOut</button>
 			</div>
 		{/if}
