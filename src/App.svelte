@@ -39,6 +39,7 @@
 	<h1>현재시간: {formatter.format($time)}</h1>
 
 	<main>
+		{#if !logged.loggedIn}
 		<div>
 			<input bind:value={inputId} type="text" placeholder='아이디'>
 			<input bind:value={inputPass} type="password" placeholder='비밀번호'> 
@@ -46,6 +47,8 @@
 			<br>
 			<span id=error></span>
 		</div>
+		{/if}
+
 		{#if logged.loggedIn}
 		<div>
 			<button on:click={toggle}>LogOut</button>
