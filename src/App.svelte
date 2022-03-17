@@ -1,7 +1,9 @@
 <script>
 	import { time } from './main.js';
 
-	import { name  } from "./store.js";
+	import { name } from "./store.js";
+	
+	import { idPicture } from "./store";
 
 	const formatter = new Intl.DateTimeFormat('ko', {
 		hour24: true,
@@ -25,6 +27,14 @@
 	name.subscribe(value => {
 		userName = value
 	})
+
+	let src;
+
+	idPicture.subscribe(value =>{
+		scr = value
+	})
+
+
 
  	function logIn(){
 		 if(
