@@ -22,20 +22,6 @@
 
 	let toggle = () => logged.loggedIn = !logged.loggedIn;
 
-	let userName;
-
-	name.subscribe(value => {
-		userName = value
-	})
-
-	let src;
-
-	idPicture.subscribe(value =>{
-		scr = value
-	})
-
-
-
  	function logIn(){
 		 if(
 			 userId == inputId,
@@ -69,8 +55,8 @@
 
 		{#if logged.loggedIn}
 			<div class="loggedIn">
-				<h1>환영합니다 {userName} 회원님</h1>
-				<img {src} alt=" Lee Jae-yong">
+				<h1>환영합니다 {$name} 회원님</h1>
+				<img src = {$idPicture} alt=" Lee Jae-yong">
 				<button on:click={toggle}>LogOut</button>
 			</div>
 		{/if}
