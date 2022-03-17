@@ -14,7 +14,7 @@
 	let inputId = ''
 	let inputPass = ''
 
-	
+	let logged = {loggedIn: false}
 
  	function logIn(){
 		 if(
