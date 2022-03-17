@@ -40,20 +40,20 @@
 
 	<main>
 		{#if !logged.loggedIn}
-		<div>
-			<input bind:value={inputId} type="text" placeholder='아이디'>
-			<input bind:value={inputPass} type="password" placeholder='비밀번호'> 
-			<button on:click={logIn} on:click={toggle}>로그인</button>
-			<br>
-			<span id=error></span>
-		</div>
+			<div class="loggedIn">
+				<input bind:value={inputId} type="text" placeholder='아이디'>
+				<input bind:value={inputPass} type="password" placeholder='비밀번호'> 
+				<button on:click={logIn} on:click={toggle}>로그인</button>
+				<br>
+				<span id=error></span>
+			</div>
 		{/if}
 
 		{#if logged.loggedIn}
-		<div>
-			<h1>환영합니다 회원님</h1>
-			<button on:click={toggle}>LogOut</button>
-		</div>
+			<div class="loggedIn">
+				<h1>환영합니다 회원님</h1>
+				<button on:click={toggle}>LogOut</button>
+			</div>
 		{/if}
 	</main>
 
