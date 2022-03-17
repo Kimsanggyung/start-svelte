@@ -12,6 +12,9 @@
 
 	const userId = 'a';
  	const passWord = 123;
+
+	const userB = 'b';
+	const userPass = 13;
  
 	let inputId = ''
 	let inputPass = ''
