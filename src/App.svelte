@@ -12,6 +12,9 @@
 
 	const userId = 'a';
  	const passWord = 123;
+
+	const userJ = 'b'
+	const passWordJ =12
  
 	let inputId = ''
 	let inputPass = ''
@@ -33,6 +36,18 @@
 		 }
 	 }
 
+	 function logInJ(){
+		if(
+			userId == inputId,
+			passWord == inputPass
+		){
+			logged.loggedIn = !logged.loggedIn,
+			console.log('로그인 성공')
+		}
+		else{
+			document.getElementById('error').innerHTML = "아이디 또는 비밀번호가 옳지않습니다."
+		}
+	 }
 
 </script>
 
@@ -47,7 +62,7 @@
 				<input bind:value={inputId} type="text" placeholder='아이디'> 
 				<input bind:value={inputPass} type="password" placeholder='비밀번호'> 
 				<button on:click={logIn}>로그인</button>
-				<br>
+				<br/>
 				<span id=error></span>
 			</div>
 		{/if}
