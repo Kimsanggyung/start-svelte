@@ -12,9 +12,6 @@
 
 	const userId = 'a';
  	const passWord = 123;
-
-	const userB = 'b';
-	const userPass = 13;
  
 	let inputId = ''
 	let inputPass = ''
@@ -23,19 +20,10 @@
 
 	let toggle = () => logged.loggedIn = !logged.loggedIn;
 
-	let loggedB = {loggedInB: false}
-
-	let toggleB = () => loggedB.loggedInB = !loggedB.loggedInB;
-
-
-
  	function logIn(){
 		 if(
 			 userId == inputId,
-			 passWord == inputPass,
-			 userB == inputId,
-			 userPass ==inputPass
-
+			 passWord == inputPass
 		 ){
 			logged.loggedIn = !logged.loggedIn,
 			console.log('로그인 성공')
@@ -73,10 +61,6 @@
 			</div>
 		{/if}
 
-		{#if loggedB.loggedInB}
-			<h1>환영합니다</h1>
-			<button on:click={toggleB}>LogOut</button>
-		{/if}
 	</main>
 
 </body>
