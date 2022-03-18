@@ -34,6 +34,10 @@
 		 }
 	 }
 
+	 idPicture.subscribe((value) => {
+		 console.log(value)
+	 })
+
 </script>
 
 <body>
