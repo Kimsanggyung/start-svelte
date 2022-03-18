@@ -29,13 +29,13 @@
 	
 	let logged = {loggedIn: false}
 	
-	let toggle = () => logged.loggedIn = !logged.loggedIn;
+	const toggle = () => logged.loggedIn = !logged.loggedIn;
 
 	let loggedNo3 = {loggedInNo3: false}
 
-	let toggleNo3 = () => loggedNo3.loggedInNo3 = !loggedNo3.loggedInNo3
+	const toggleNo3 = () => loggedNo3.loggedInNo3 = !loggedNo3.loggedInNo3
 
-	let change = () => {
+	const change = () => {
 		name.set(inputName)
 		birth.set(inputBrith)
 		idPicture.set(inputPicture)
