@@ -96,7 +96,8 @@
 				<h2>생년월일: {$birth} </h2>
 				<img id="Lee" src = {$idPicture} alt = {$pictureAlt}>
 				<button on:click={editToggle}>수정</button>
-				<button on:click={toggle} on:click={reflash}>로그아웃</button>			
+				<button on:click={reflash} on:click={toggle}>로그아웃</button>		
+				<button on:click={reflash}>초기화</button>	
 			</div>
 		{/if}
 
