@@ -18,7 +18,7 @@
 	const passNo2 = 345;
 
 	const userNo3 = 'c';
-	const passNo3 = 567;
+	const passNo3 = 456;
 
 	let inputId = ''
 	let inputPass = ''
@@ -27,9 +27,6 @@
 	
 	let toggle = () => logged.loggedIn = !logged.loggedIn;
 
-	let N = () => {
-		prompt('변경할 이름을 입력해 주세요.')
-	}
  	
 	function logIn(){
 		if(
@@ -56,6 +53,7 @@
 			userNo3 == inputId,
 			passNo3 == inputPass
 		){
+			logged.loggedIn = !logged.loggedIn
 			console.log('3번 유저 로그인')
 		}
 
@@ -87,7 +85,6 @@
 				<h1>환영합니다 {$name} 회원님</h1>
 				<h2>생년월일: {$birth} </h2>
 				<img id="Lee" src = {$idPicture} alt = {$pictureAlt}>
-				<button on:ckick={N}>이름변경</button>
 				<button on:click={toggle}>로그아웃</button>			
 			</div>
 		{/if}
