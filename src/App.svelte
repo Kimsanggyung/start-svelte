@@ -16,7 +16,10 @@
 
 	const userNo2 = 'b';
 	const passNo2 = 345;
- 
+
+	const userNo3 = 'c';
+	const passNo3 = 567;
+
 	let inputId = ''
 	let inputPass = ''
 	
@@ -30,8 +33,8 @@
  	
 	function logIn(){
 		if(
-			 userId == inputId,
-			 passWord == inputPass
+			userId == inputId,
+			passWord == inputPass
 		){
 			logged.loggedIn = !logged.loggedIn,
 			console.log('로그인 성공')
@@ -47,6 +50,13 @@
 			pictureAlt.set('Chung Yongjin')
 			logged.loggedIn = !logged.loggedIn
 			console.log('로그인 성공')
+		}
+
+		else if(
+			userNo3 == inputId,
+			passNo3 == inputPass
+		){
+			console.log('3번 유저 로그인')
 		}
 
 		else{
