@@ -17,9 +17,6 @@
 	const userNo2 = 'b';
 	const passNo2 = 345;
 
-	const userNo3 = 'c';
-	const passNo3 = 456;
-
 	let inputId = ''
 	let inputPass = ''
 
@@ -27,7 +24,6 @@
 	let inputBrith = ''
 	let	inputPicture = ''
 	let inputAlt =''
-
 	
 	let logged = {loggedIn: false}
 	
@@ -37,11 +33,21 @@
 
 	const editToggle = () => editMode.editModeIn = !editMode.editModeIn
 
+	let num = [1, 2, 3, 4, 5]
+
 	const change = () => {
 		name.set(inputName)
 		birth.set(inputBrith)
 		idPicture.set(inputPicture)
 		pictureAlt.set(inputAlt)
+		localStorage.setItem('name', JSON.stringify(name))
+		localStorage.setItem('brith', JSON.stringify(birth))
+		localStorage.setItem('img', JSON.stringify(idPicture))
+		localStorage.setItem('alt', JSON.stringify(pictureAlt))
+		localStorage.setItem('num', JSON.stringify(num))
+
+
+
 	}
  	
 	function logIn(){
