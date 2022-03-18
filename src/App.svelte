@@ -77,7 +77,7 @@ import { onDestroy } from 'svelte';
 			<div class="loggedIn">
 				<h1>환영합니다 {$name} 회원님</h1>
 				<h2>생년월일: {$birth} </h2>
-				<img id="Lee" src = {$idPicture} alt = "Lee Jae-yong">
+				<img id="Lee" src = {$idPicture} alt = {alt}>
 				<button on:click={toggle}>로그아웃</button>			
 			</div>
 		{/if}
