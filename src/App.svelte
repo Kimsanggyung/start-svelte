@@ -28,7 +28,6 @@
 	let	inputPicture = ''
 
 	
-	localStorage.setItem('key', changeInput)
 	let logged = {loggedIn: false}
 	
 	const toggle = () => logged.loggedIn = !logged.loggedIn;
