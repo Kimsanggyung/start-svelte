@@ -26,6 +26,7 @@
 	let	inputName = ''
 	let inputBrith = ''
 	let	inputPicture = ''
+	let inputAlt =''
 
 	
 	let logged = {loggedIn: false}
@@ -40,7 +41,7 @@
 		name.set(inputName)
 		birth.set(inputBrith)
 		idPicture.set(inputPicture)
-		localStorage.setItem('key', {$name})
+		pictureAlt.set(inputAlt)
 	}
  	
 	function logIn(){
@@ -104,15 +105,12 @@
 		{/if}
 
 		{#if loggedNo3.loggedInNo3}
-			<div class="loggedIn">
-				<h1>환영합니다 {$name} 회원님 </h1>
-				<h2>생년월일: {$birth} </h2>
-				<img id="Lee" src = {$idPicture} alt = {$pictureAlt}>
+			<div>
 				<input bind:value={inputName} type="text" placeholder='이름을 입력해 주세요.'> 
 				<input bind:value={inputBrith} type="text" placeholder='생년월일을 입력해 주세요'>
 				<input bind:value={inputPicture} type="text" placeholder='시진주소를 입력해 주세요.'>
-				<button on:click={change}>등록</button>
-				<button on:click={toggleNo3}>로그아웃</button>			
+				<input bind:value={inputAlt} type="text" placeholder="사진소개를 써줏요 예) 대통령의 사진입니다.">
+				<button on:click={change}>등록</button>		
 			</div>
 		{/if}
 
