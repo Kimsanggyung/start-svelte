@@ -40,14 +40,7 @@
 		birth.set(inputBrith)
 		idPicture.set(inputPicture)
 		pictureAlt.set(inputAlt)
-		localStorage.setItem('name', JSON.stringify(name))
-		localStorage.setItem('brith', JSON.stringify(birth))
-		localStorage.setItem('img', JSON.stringify(idPicture))
-		localStorage.setItem('alt', JSON.stringify(pictureAlt))
-		localStorage.setItem('num', JSON.stringify(num))
-
-
-
+		console.log(name)
 	}
  	
 	function logIn(){
