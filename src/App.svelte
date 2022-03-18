@@ -4,7 +4,7 @@ import { onDestroy } from 'svelte';
 	
     import { time } from './main.js';
 	
-    import { name, idPicture, birth } from "./store.js";
+    import { name, idPicture, birth, alt } from "./store.js";
 	
     const formatter = new Intl.DateTimeFormat('ko', {
 		hour24: true,
