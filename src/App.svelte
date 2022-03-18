@@ -23,10 +23,13 @@
 	let inputId = ''
 	let inputPass = ''
 
-	let inputName = ''
-	let inputBrith = ''
-	let inputPicture =''
+	let changeInput ={
+		inputName:  '',
+		inputBrith:  '',
+		inputPicture: ''
+	}
 	
+	localStorage.setItem('key', changeInput)
 	let logged = {loggedIn: false}
 	
 	const toggle = () => logged.loggedIn = !logged.loggedIn;
