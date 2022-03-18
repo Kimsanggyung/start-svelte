@@ -4,7 +4,7 @@ import { onDestroy } from 'svelte';
 	
     import { time } from './main.js';
 	
-    import { name, idPicture, birth, alt } from "./store.js";
+    import { name, idPicture, birth, pictureAlt } from "./store.js";
 	
     const formatter = new Intl.DateTimeFormat('ko', {
 		hour24: true,
@@ -77,7 +77,7 @@ import { onDestroy } from 'svelte';
 			<div class="loggedIn">
 				<h1>환영합니다 {$name} 회원님</h1>
 				<h2>생년월일: {$birth} </h2>
-				<img id="Lee" src = {$idPicture} alt = {alt}>
+				<img id="Lee" src = {$idPicture} alt = {$pictureAlt}>
 				<button on:click={toggle}>로그아웃</button>			
 			</div>
 		{/if}
