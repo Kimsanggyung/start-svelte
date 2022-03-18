@@ -22,6 +22,10 @@
 
 	let inputId = ''
 	let inputPass = ''
+
+	let inputName = ''
+	let inputBrith = ''
+	let inputPicture =''
 	
 	let logged = {loggedIn: false}
 	
@@ -30,6 +34,12 @@
 	let loggedNo3 = {loggedInNo3: false}
 
 	let toggleNo3 = () => loggedNo3.loggedInNo3 = !loggedNo3.loggedInNo3
+
+	let change = () => {
+		name.set(inputName)
+		birth.set(inputBrith)
+		idPicture.set(inputPicture)
+	}
  	
 	function logIn(){
 		if(
@@ -62,7 +72,7 @@
 		else{
 			document.getElementById('error').innerHTML = "아이디 또는 비밀번호가 옳지않습니다."
 		}
-	}	
+	}
 	
 </script>
 
@@ -93,9 +103,13 @@
 
 		{#if loggedNo3.loggedInNo3}
 			<div class="loggedIn">
-				<h1>환영합니다 회원님</h1>
-				<h2>생년월일: </h2>
+				<h1>환영합니다 {$name} 회원님 </h1>
+				<h2>생년월일: {$birth} </h2>
 				<img id="Lee" src = {$idPicture} alt = {$pictureAlt}>
+				<input bind:value={inputName} type="text" placeholder='이름을 입력해 주세요.'> 
+				<input bind:value={inputBrith} type="text" placeholder='생년월일을 입력해 주세요'>
+				<input bind:value={inputPicture} type="text" placeholder='시진주소를 입력해 주세요.'>
+				<button on:click={change}>등록</button>
 				<button on:click={toggleNo3}>로그아웃</button>			
 			</div>
 		{/if}
