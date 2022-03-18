@@ -39,7 +39,7 @@
 		name.set(inputName)
 		birth.set(inputBrith)
 		idPicture.set(inputPicture)
-		localStorage.setItem('key', name)
+		localStorage.setItem('key', {$name})
 	}
  	
 	function logIn(){
