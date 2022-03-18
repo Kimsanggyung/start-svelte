@@ -33,9 +33,9 @@
 	
 	const toggle = () => logged.loggedIn = !logged.loggedIn;
 
-	let loggedNo3 = {loggedInNo3: false}
+	let editMode = {editModeIn: false}
 
-	const toggleNo3 = () => loggedNo3.loggedInNo3 = !loggedNo3.loggedInNo3
+	const editToggle = () => editMode.editModeIn = !editMode.editModeIn
 
 	const change = () => {
 		name.set(inputName)
@@ -65,13 +65,6 @@
 			console.log('로그인 성공')
 		}
 
-		else if(
-			userNo3 == inputId,
-			passNo3 == inputPass
-		){
-			loggedNo3.loggedInNo3 = !loggedNo3.loggedInNo3
-		}
-
 		else{
 			document.getElementById('error').innerHTML = "아이디 또는 비밀번호가 옳지않습니다."
 		}
@@ -85,7 +78,7 @@
 
 	<main>
 
-		{#if !logged.loggedIn, !loggedNo3.loggedInNo3}
+		{#if !logged.loggedIn}
 			<div class="loggedIn">
 				<input bind:value={inputId} type="text" placeholder='아이디'> 
 				<input bind:value={inputPass} type="password" placeholder='비밀번호'> 
@@ -100,17 +93,18 @@
 				<h1>환영합니다 {$name} 회원님</h1>
 				<h2>생년월일: {$birth} </h2>
 				<img id="Lee" src = {$idPicture} alt = {$pictureAlt}>
+				<button on:click={editToggle}>수정</button>
 				<button on:click={toggle}>로그아웃</button>			
 			</div>
 		{/if}
 
-		{#if loggedNo3.loggedInNo3}
+		{#if editMode.editModeIn}
 			<div>
 				<input bind:value={inputName} type="text" placeholder='이름을 입력해 주세요.'> 
 				<input bind:value={inputBrith} type="text" placeholder='생년월일을 입력해 주세요'>
 				<input bind:value={inputPicture} type="text" placeholder='시진주소를 입력해 주세요.'>
-				<input bind:value={inputAlt} type="text" placeholder="사진소개를 써줏요 예) 대통령의 사진입니다.">
-				<button on:click={change}>등록</button>		
+				<input bind:value={inputAlt} type="text" placeholder="사진소개를 써주세요.">
+				<button on:click={change} on:click={editToggle}>등록</button>		
 			</div>
 		{/if}
 
