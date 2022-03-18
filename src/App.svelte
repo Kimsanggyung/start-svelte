@@ -1,7 +1,5 @@
 <script>
 
-	import { onDestroy } from 'svelte';
-
 	import { time } from './main.js';
 	
 	import { name, idPicture, birth, pictureAlt } from "./store.js";
