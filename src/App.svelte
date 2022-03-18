@@ -39,14 +39,7 @@ import { onDestroy } from 'svelte';
 	 idPicture.subscribe((value) => {
 		 console.log(value)
 	 })
-
-	 let IDP = () => {
-		 idPicture.set('https://ww.namu.la/s/23a1589ba5e869b1e2f7614901f6b0b176cffcb626cdd6095242b739793b323eed1fd8ee5484759e3181d05e2a22291c714987ee08c77692565dc69c24f603f85bb52ee5bd7d322d579f643c1ba69f8a253552392bf17370c65c32c136e7d8c4')
-	 }
-	 
-
-	 
-
+	
 </script>
 
 <body>
@@ -70,8 +63,7 @@ import { onDestroy } from 'svelte';
 				<h1>환영합니다 {$name} 회원님</h1>
 				<h2>생년월일 {$birth} </h2>
 				<img id="Lee" src = {$idPicture} alt = "Lee Jae-yong">
-				<button on:click={toggle}>로그아웃</button>
-				<button on:dblclick={IDP}>사진변경</button>
+				<button on:click={toggle}>로그아웃</button>			
 			</div>
 		{/if}
 
