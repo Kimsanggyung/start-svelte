@@ -41,8 +41,11 @@
 		idPicture.set(inputPicture)
 		pictureAlt.set(inputAlt)
 		console.log(name)
+		localStorage.setItem('name', (inputName))
 	}
  	
+	const reflash = () => localStorage.clear();
+
 	function logIn(){
 		if(
 			userId == inputId,
@@ -93,7 +96,7 @@
 				<h2>생년월일: {$birth} </h2>
 				<img id="Lee" src = {$idPicture} alt = {$pictureAlt}>
 				<button on:click={editToggle}>수정</button>
-				<button on:click={toggle}>로그아웃</button>			
+				<button on:click={toggle} on:click={reflash}>로그아웃</button>			
 			</div>
 		{/if}
 
