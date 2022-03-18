@@ -23,11 +23,10 @@
 	let inputId = ''
 	let inputPass = ''
 
-	let changeInput ={
-		inputName:  '',
-		inputBrith:  '',
-		inputPicture: ''
-	}
+	let	inputName = ''
+	let inputBrith = ''
+	let	inputPicture = ''
+
 	
 	localStorage.setItem('key', changeInput)
 	let logged = {loggedIn: false}
