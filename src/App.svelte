@@ -23,6 +23,10 @@
 	let logged = {loggedIn: false}
 	
 	let toggle = () => logged.loggedIn = !logged.loggedIn;
+
+	let N = () => {
+		prompt('변경할 이름을 입력해 주세요.')
+	}
  	
 	function logIn(){
 		if(
@@ -73,6 +77,7 @@
 				<h1>환영합니다 {$name} 회원님</h1>
 				<h2>생년월일: {$birth} </h2>
 				<img id="Lee" src = {$idPicture} alt = {$pictureAlt}>
+				<button on:ckick={N}>이름변경</button>
 				<button on:click={toggle}>로그아웃</button>			
 			</div>
 		{/if}
