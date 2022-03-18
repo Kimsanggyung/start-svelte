@@ -27,6 +27,9 @@
 	
 	let toggle = () => logged.loggedIn = !logged.loggedIn;
 
+	let loggedNo3 = {loggedInNo3: false}
+
+	let toggleNo3 = () => loggedNo3.loggedInNo3 = !loggedNo3.loggedInNo3
  	
 	function logIn(){
 		if(
@@ -53,14 +56,13 @@
 			userNo3 == inputId,
 			passNo3 == inputPass
 		){
-			logged.loggedIn = !logged.loggedIn
-			console.log('3번 유저 로그인')
+			loggedNo3.loggedInNo3 = !loggedNo3.loggedInNo3
 		}
 
 		else{
 			document.getElementById('error').innerHTML = "아이디 또는 비밀번호가 옳지않습니다."
 		}
-	}
+	}	
 	
 </script>
 
@@ -70,7 +72,7 @@
 
 	<main>
 
-		{#if !logged.loggedIn}
+		{#if !logged.loggedIn, !loggedNo3.loggedInNo3}
 			<div class="loggedIn">
 				<input bind:value={inputId} type="text" placeholder='아이디'> 
 				<input bind:value={inputPass} type="password" placeholder='비밀번호'> 
@@ -86,6 +88,15 @@
 				<h2>생년월일: {$birth} </h2>
 				<img id="Lee" src = {$idPicture} alt = {$pictureAlt}>
 				<button on:click={toggle}>로그아웃</button>			
+			</div>
+		{/if}
+
+		{#if loggedNo3.loggedInNo3}
+			<div class="loggedIn">
+				<h1>환영합니다 회원님</h1>
+				<h2>생년월일: </h2>
+				<img id="Lee" src = {$idPicture} alt = {$pictureAlt}>
+				<button on:click={toggleNo3}>로그아웃</button>			
 			</div>
 		{/if}
 
