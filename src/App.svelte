@@ -1,4 +1,6 @@
 <script>
+import { onDestroy } from 'svelte';
+
 	
     import { time } from './main.js';
 	
@@ -37,6 +39,8 @@
 	 idPicture.subscribe((value) => {
 		 console.log(value)
 	 })
+	 
+	 onDestroy(unsubscribe)
 
 </script>
 
