@@ -13,15 +13,9 @@
 		second: '2-digit'
 	});
 	
-	const userId = 'a';
-	const passWord = 123;
-
-	const userNo2 = 'b';
-	const passNo2 = 345;
-
 	let inputId = ''
 	let inputPass = ''
-
+ 
 	let	inputName = ''
 	let inputBrith = ''
 	let	inputPicture = ''
