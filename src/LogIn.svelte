@@ -34,3 +34,5 @@
 		}
 	}
 </script>
+
+<button on:click={logIn}></button>
