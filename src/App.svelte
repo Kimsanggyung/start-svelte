@@ -4,7 +4,6 @@
 	
 	import Login from "./LogIn.svelte";
 	
-	import Editmode from "./Editmode.svelte";
 	const formatter = new Intl.DateTimeFormat('ko', {
 		hour24: true,
 		hour: 'numeric',
