@@ -12,9 +12,6 @@
 		minute: '2-digit',
 		second: '2-digit'
 	});
-	
-	let inputId = ''
-	let inputPass = ''
  
 	let	inputName = ''
 	let inputBrith = ''
