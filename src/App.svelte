@@ -33,8 +33,6 @@
 
 	const editToggle = () => editMode.editModeIn = !editMode.editModeIn
 
-	let num = [1, 2, 3, 4, 5]
-
 	const change = () => {
 		name.set(inputName)
 		birth.set(inputBrith)
