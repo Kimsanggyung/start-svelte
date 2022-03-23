@@ -31,4 +31,4 @@
 <input bind:value={inputPicture} type="text" placeholder='시진주소를 입력해 주세요.'>
 <input bind:value={inputAlt} type="text" placeholder="사진소개를 써주세요.">
 <button on:click={change} on:click={editToggle}>등록</button>
-<button on:click={reflash}></button>
+<button on:click={reflash}>초기화</button>
