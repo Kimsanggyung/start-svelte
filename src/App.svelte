@@ -2,8 +2,6 @@
 
 	import { time } from './main.js';
 	
-	import { name, idPicture, birth, pictureAlt } from "./store.js";
-
 	import Login from "./LogIn.svelte";
 	
 	import Editmode from "./Editmode.svelte";
