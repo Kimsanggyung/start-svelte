@@ -35,4 +35,4 @@
 	}
 </script>
 
-<button on:click={logIn}></button>
+<button on:click={logIn}>로그인</button>
