@@ -1,4 +1,7 @@
 <script>
+
+    import { name, idPicture, birth, pictureAlt } from "./store.js";
+    
     let	inputName = ''
 	let inputBrith = ''
 	let	inputPicture = ''
