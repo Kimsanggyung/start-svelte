@@ -53,10 +53,6 @@
 
 		{#if !logged.loggedIn}
 			<div class="loggedIn">
-				<input bind:value={inputId} type="text" placeholder='아이디'> 
-				<input bind:value={inputPass} type="password" placeholder='비밀번호'> 
-				<br/>
-				<span id=error></span>
 				<Login/>
 			</div>
 		{/if}
