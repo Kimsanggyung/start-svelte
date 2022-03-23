@@ -28,12 +28,6 @@
 	console.log(idPicture)
 	console.log(pictureAlt)
 
-	let check = document.getElementById('id')
-
-	let checked = check.getAttribute("checked")
-
-	console.log(checked)
-
 	function logIn(){
 		if(
 			userId == inputId,
