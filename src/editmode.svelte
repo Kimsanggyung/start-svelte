@@ -25,7 +25,7 @@
 	const reflash = () => localStorage.clear();
 </script>
 
-{#if editMode.editModeIn}
+{#if !editMode.editModeIn}
     
     <input bind:value={inputName} type="text" placeholder='이름을 입력해 주세요.'> 
     <input bind:value={inputBrith} type="text" placeholder='생년월일을 입력해 주세요'>
