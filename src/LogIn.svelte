@@ -1,6 +1,8 @@
 <script>
 
 	import { name, idPicture, birth, pictureAlt } from "./store.js";
+
+	import Editmode from "./Editmode.svelte";
 	
 	const userId = 'a';
 	const passWord = 123;
@@ -13,7 +15,14 @@
 
 	let logged = {loggedIn: false}
 	
-	const toggle = () => logged.loggedIn = !logged.loggedIn;
+	let editMode = {editModeIn: false}
+
+	const editToggle = () => editMode.editModeIn = !editMode.editModeIn
+
+	const logoutButton = () =>{
+		logged.loggedIn = !logged.loggedIn;
+		editMode.editModeIn = !editMode.editModeIn;
+	}
 
 	function logIn(){
 		if(
@@ -41,9 +50,48 @@
 		}
 	}
 </script>
+<body>
 
-<input bind:value={inputId} type="text" placeholder='아이디'> 
-<input bind:value={inputPass} type="password" placeholder='비밀번호'> 
-<button on:click={logIn}>로그인</button>
-<br/>
-<span id=error></span>
+	<main>
+
+		{#if !logged.loggedIn}
+			<div class="loggedIn">
+				<input bind:value={inputId} type="text" placeholder='아이디'> 
+				<input bind:value={inputPass} type="password" placeholder='비밀번호'> 
+				<button on:click={logIn}>로그인</button>
+				<br/>
+				<label><input type="checkbox">아이디 저장</label>
+				<span id=error></span>
+			</div>
+		{/if}
+
+		{#if logged.loggedIn}
+			<div class="loggedIn">
+				<h1>환영합니다 {$name} 회원님</h1>
+				<h2>생년월일: {$birth} </h2>
+				<img id="Lee" src = {$idPicture} alt = {$pictureAlt}>
+				<button on:click={editToggle}>수정</button>
+				<button  on:click={logoutButton}>로그아웃</button>
+			</div>
+		{/if}
+
+		{#if editMode.editModeIn}
+			<Editmode/>
+		{/if}
+
+	</main>
+
+</body>
+
+<style>
+
+#error{
+	color: red;
+}
+
+#Lee{
+	width: 175px;
+	height: 269px;
+}
+
+</style>
