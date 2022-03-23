@@ -8,6 +8,13 @@
 	const userNo2 = 'b';
 	const passNo2 = 345;
 
+	let inputId = ''
+	let inputPass = ''
+
+	let logged = {loggedIn: false}
+	
+	const toggle = () => logged.loggedIn = !logged.loggedIn;
+
 	function logIn(){
 		if(
 			userId == inputId,
@@ -34,5 +41,6 @@
 		}
 	}
 </script>
+
 
 <button on:click={logIn}>로그인</button>
