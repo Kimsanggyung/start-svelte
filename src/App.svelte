@@ -3,6 +3,8 @@
 	import { time } from './main.js';
 	
 	import Login from "./LogIn.svelte";
+
+	import Editmode from "./editmode.svelte";
 	
 	const formatter = new Intl.DateTimeFormat('ko', {
 		hour24: true,
