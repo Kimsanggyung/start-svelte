@@ -16,12 +16,17 @@
 		pictureAlt.set(inputAlt)
 		console.log(name)
 		localStorage.setItem('name', (inputName))
-		localStorage.setItem('brith', (inputBrith))
+		localStorage.setItem('birth', (inputBrith))
 		localStorage.setItem('img', (inputPicture))
 		localStorage.setItem('alt', (inputAlt))
         editMode.editModeIn = !editMode.editModeIn
 	}
- 	
+
+	export let storageName = localStorage.getItem('name')
+	export let storageBirth = localStorage.getItem('birth')
+	export let storageImg = localStorage.getItem('img')
+	export let storageAlt = localStorage.getItem('alt')
+
 	const reflash = () => localStorage.clear();
 </script>
 
