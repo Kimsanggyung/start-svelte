@@ -62,7 +62,7 @@
 
 	function saveId(){
         if(check.checked){
-            ocalStorage.setItem('ID', inputId)
+            localStorage.setItem('ID', inputId)
         }
     }
 
