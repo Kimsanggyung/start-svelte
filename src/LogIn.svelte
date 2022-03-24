@@ -21,7 +21,9 @@
 
 	const logoutButton = () =>{
 		logged.loggedIn = !logged.loggedIn;
-		editMode.editModeIn = !editMode.editModeIn;
+		if(editMode.editModeIn){
+			editMode.editModeIn = !editMode.editModeIn
+		}
 	}
 
 	function logIn(){
