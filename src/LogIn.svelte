@@ -3,7 +3,7 @@
 	import { name, idPicture, birth, pictureAlt } from "./store.js";
 
 	import Editmode from "./Editmode.svelte";
-	
+
 	const userId = 'a';
 	const passWord = 123;
 
@@ -23,10 +23,6 @@
 		logged.loggedIn = !logged.loggedIn;
 		editMode.editModeIn = !editMode.editModeIn;
 	}
-	console.log(name)
-	console.log(birth)
-	console.log(idPicture)
-	console.log(pictureAlt)
 
 	function logIn(){
 		if(
@@ -57,6 +53,17 @@
 			document.getElementById('error').innerHTML = "아이디 또는 비밀번호가 옳지않습니다."
 		}
 	}
+
+	let check = {checked: false}
+
+    const CLICKCHECK = () => check.checked = !check.checked;
+
+	function saveId(){
+        if(check.checked){
+            ocalStorage.setItem('ID', inputId)
+        }
+    }
+
 </script>
 <body>
 
@@ -66,9 +73,9 @@
 			<div class="loggedIn">
 				<input bind:value={inputId} type="text" placeholder='아이디'> 
 				<input bind:value={inputPass} type="password" placeholder='비밀번호'> 
-				<button on:click={logIn}>로그인</button>
+				<button on:click={logIn} on:click={saveId}>로그인</button>
 				<br/>
-				<label><input type="checkbox" id="id">아이디 저장</label>
+				<label><input type="checkbox" id="id" on:click={CLICKCHECK}>아이디 저장</label>
 				<span id=error></span>
 			</div>
 		{/if}
