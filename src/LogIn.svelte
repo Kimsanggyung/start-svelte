@@ -1,7 +1,7 @@
 <script>
 
 	import { name, idPicture, birth, pictureAlt } from "./store.js";
-
+	import { storageName, storageBirth, storageImg, storageAlt } from "./Editmode.svelte";
 	import Editmode from "./Editmode.svelte";
 
 	const userId = 'a';
