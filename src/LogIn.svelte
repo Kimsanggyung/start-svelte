@@ -30,11 +30,9 @@
 
 	let storageId = localStorage.getItem('ID')
 
-	const StorageInput = () => {
-		if(storageId !== null){
-			inputId = storageId
-			console.log(inputId)
-		}
+	if(storageId !== null){
+		inputId = storageId
+		console.log(inputId)
 	}
 
 	function logIn(){
@@ -101,7 +99,6 @@
 				<img id="Lee" src = {$idPicture} alt = {$pictureAlt}>
 				<button on:click={editToggle}>수정</button>
 				<button on:click={logoutButton}>로그아웃</button>
-				<button on:click={StorageInput}>회원 정보 저장</button>
 			</div>
 		{/if}
 
