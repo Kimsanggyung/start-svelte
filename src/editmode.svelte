@@ -21,12 +21,7 @@
 		localStorage.setItem('alt', (inputAlt))
         editMode.editModeIn = !editMode.editModeIn
 	}
-
-	export let storageName = localStorage.getItem('name')
-	export let storageBirth = localStorage.getItem('birth')
-	export let storageImg = localStorage.getItem('img')
-	export let storageAlt = localStorage.getItem('alt')
-
+	
 	const reflash = () => localStorage.clear();
 </script>
 
