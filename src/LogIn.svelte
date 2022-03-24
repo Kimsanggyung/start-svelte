@@ -10,10 +10,10 @@
 	const userNo2 = 'b';
 	const passNo2 = 345;
 
-	let inputId = localStorage.getItem('ID')
+	let inputId = ''
 	let inputPass = ''
 
-	console.log(inputId)
+	console.log(inputId.value)
 
 	let logged = {loggedIn: false}
 	
@@ -26,10 +26,16 @@
 		if(editMode.editModeIn){
 			editMode.editModeIn = !editMode.editModeIn
 		}
-		console.log(inputId)
 	}
 
 	let storageId = localStorage.getItem('ID')
+
+	const StorageInput = () => {
+		if(storageId !== null){
+			inputId.value = storageId
+			console.log(inputId.value)
+		}
+	}
 
 	function logIn(){
 		if(
@@ -93,7 +99,8 @@
 				<h2>생년월일: {$birth} </h2>
 				<img id="Lee" src = {$idPicture} alt = {$pictureAlt}>
 				<button on:click={editToggle}>수정</button>
-				<button  on:click={logoutButton}>로그아웃</button>
+				<button on:click={logoutButton}>로그아웃</button>
+				<button on:click={StorageInput}>회원 정보 저장</button>
 			</div>
 		{/if}
 
