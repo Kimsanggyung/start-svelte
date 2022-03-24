@@ -26,6 +26,8 @@
 		}
 	}
 
+	let storageId = localStorage.getItem('ID')
+
 	function logIn(){
 		if(
 			userId == inputId,
@@ -73,9 +75,10 @@
 
 		{#if !logged.loggedIn}
 			<div class="loggedIn">
-				<input bind:value={inputId} type="text" placeholder='아이디'> 
+				<input bind:value={inputId} {storageId} type="text" placeholder='아이디'>
+				<input bind:value={storageId} type="text" placeholder='저장된 아이디'>
 				<input bind:value={inputPass} type="password" placeholder='비밀번호'> 
-				<button on:click={logIn} on:click={saveId}>로그인</button>
+				<button on:click={saveId} on:click={logIn}>로그인</button>
 				<br/>
 				<label><input type="checkbox" id="id" on:click={CLICKCHECK}>아이디 저장</label>
 				<span id=error></span>
