@@ -1,8 +1,7 @@
 <script>
 
 	import { name, idPicture, birth, pictureAlt } from "./store.js";
-	import { storageName, storageBirth, storageImg, storageAlt } from "./Editmode.svelte";
-	import Editmode from "./Editmode.svelte";
+	import Editmode from "./editmode.svelte";
 
 	const userId = 'a';
 	const passWord = 123;
@@ -35,11 +34,14 @@
 		console.log(inputId)
 	}
 
+	let storageName = localStorage.getItem('name')
+	let storageBirth = localStorage.getItem('birth')
+	let storageImg = localStorage.getItem('img')
+	let storageAlt = localStorage.getItem('alt')
+
+
 	function logIn(){
-		if(
-			userId == inputId,
-			passWord == inputPass
-		){
+		if(userId == inputId, passWord == inputPass, storageName == null, storageBirth == null, storageImg == null, storageAlt == null){
 			name.set('이씨')
 			birth.set('1968년 6월 23일')
 			idPicture.set('https://ww.namu.la/s/91986ffc01b6136fb453c4ff8b3e63adf90e525e6b10e1643058339c924830276d1fc646c2ac918d1f31e83c59308ea232acb64afb280dabeee0afc024b9dd3063662e1cc7dd5e8191c10ae35b0c811b')
@@ -49,14 +51,20 @@
 			console.log(inputId)
 		}
 
-		else if(
-			 userNo2 == inputId,
-			 passNo2 == inputPass
-		){
+		else if(userNo2 == inputId, passNo2 == inputPass){
 			name.set('정씨')
 			birth.set('1968년 9월 19일')
 			idPicture.set('https://w.namu.la/s/2b83516ecb2360d95faa10f85763ad59ade34ede897311db5fc3a40256d7f1dd855bbf8eddb57c9fff4d4a24d070fd5ad625181926ea33915713e2351be1486fd1d510c24e5d05bc1f220991ec051010')
 			pictureAlt.set('Chung Yong-jin')
+			logged.loggedIn = !logged.loggedIn
+			console.log('로그인 성공')
+		}
+
+		else if (userId == inputId, passWord == inputPass, storageName !== null, storageBirth !== null, storageImg !== null, storageAlt !== null){
+			name.set(storageName)
+			birth.set(storageBirth)
+			idPicture.set(storageImg)
+			pictureAlt.set(storageAlt)
 			logged.loggedIn = !logged.loggedIn
 			console.log('로그인 성공')
 		}
