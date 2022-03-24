@@ -22,11 +22,11 @@
 		else if(inputName !== '', inputBirth !== '', inputPicture == '', inputAlt !== ''){
 			alert('변경할 사진주소을 입략해 주세요.')
 		}
-		else if(inputName == '', inputBirth !== '', inputPicture !== '', inputAlt == ''){
+		else if(inputName !== '', inputBirth !== '', inputPicture !== '', inputAlt == ''){
 			alert('변경할 사진 정보를 입력해 주세요')
 		}
-		else{
-			name.set(inputName)
+		else if(inputName !== '', inputBirth !== '', inputPicture !== '', inputAlt !== ''){
+		name.set(inputName)
 		birth.set(inputBrith)
 		idPicture.set(inputPicture)
 		pictureAlt.set(inputAlt)
