@@ -10,8 +10,10 @@
 	const userNo2 = 'b';
 	const passNo2 = 345;
 
-	let inputId = ''
+	let inputId = localStorage.getItem('ID')
 	let inputPass = ''
+
+	console.log(inputId)
 
 	let logged = {loggedIn: false}
 	
@@ -24,6 +26,7 @@
 		if(editMode.editModeIn){
 			editMode.editModeIn = !editMode.editModeIn
 		}
+		console.log(inputId)
 	}
 
 	let storageId = localStorage.getItem('ID')
@@ -75,8 +78,7 @@
 
 		{#if !logged.loggedIn}
 			<div class="loggedIn">
-				<input bind:value={inputId} {storageId} type="text" placeholder='아이디'>
-				<input bind:value={storageId} type="text" placeholder='저장된 아이디'>
+				<input bind:value={inputId} type="text" placeholder='아이디'>
 				<input bind:value={inputPass} type="password" placeholder='비밀번호'> 
 				<button on:click={saveId} on:click={logIn}>로그인</button>
 				<br/>
