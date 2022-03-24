@@ -13,7 +13,7 @@
 	let inputId = ''
 	let inputPass = ''
 
-	console.log(inputId.value)
+	console.log(inputId)
 
 	let logged = {loggedIn: false}
 	
@@ -32,8 +32,8 @@
 
 	const StorageInput = () => {
 		if(storageId !== null){
-			inputId.value = storageId
-			console.log(inputId.value)
+			inputId = storageId
+			console.log(inputId)
 		}
 	}
 
