@@ -48,6 +48,7 @@
 			pictureAlt.set('Lee Jae-yong')
 			logged.loggedIn = !logged.loggedIn,
 			console.log('로그인 성공')
+			console.log(inputId)
 		}
 
 		else if(
